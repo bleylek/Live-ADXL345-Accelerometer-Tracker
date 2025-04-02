@@ -40,7 +40,7 @@ def read_serial_data():
     dt = 0.05
     raw_x_vals = []
 
-    while True:
+    while True: # sürekli almaması gerek onun yerine http request atıldığı zaman veri alalım (web socket olabilir)
         try:
             line = ser.readline().decode('utf-8', errors='ignore').strip()
             if line:
